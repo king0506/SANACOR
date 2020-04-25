@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/v_bg"
+    tools:context="._data_aqc">
+
+    <LinearLayout
+        android:id="@+id/gggggg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.444"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/btn_back" />
+
+            <TextView
+                android:id="@+id/ipshared"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="WATER READING"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="114dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/dc_btn" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/head_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#000"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:id="@+id/lc_searching"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/searching_def" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SEARCHING DEVICE TO CONNECT"
+                    android:textAlignment="center"
+                    android:textColor="#88FFFDFD" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lc_errors"
+                android:layout_width="match_parent"
+                android:layout_height="447dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="348dp"
+                    app:srcCompat="@drawable/error_img" />
+
+                <Button
+                    android:id="@+id/button11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Retry"
+                    android:textColor="#3AAD3F" />
+
+                <Button
+                    android:id="@+id/button12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Configuration"
+                    android:textColor="#3AAD3F" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="258dp"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/Provide_THIS_for_graph"
+                android:layout_width="match_parent"
+                android:layout_height="130dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/Tables"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Temp"
+                            android:textColor="#A7A7A7" />
+
+                        <Space
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Potnl. Hydrogen"
+                            android:textColor="#A7A7A7" />
+
+                        <Space
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Salinity"
+                            android:textColor="#A7A7A7" />
+
+                        <Space
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Turbidity"
+                            android:textColor="#A7A7A7" />
+
+                        <Space
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="97dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Dis.Oxygen"
+                            android:textColor="#A7A7A7" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/temp_l"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="11.00"
+                            android:textColor="#A7A7A7"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/ph_l"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="00.00"
+                            android:textColor="#A7A7A7"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/sal_l"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="11.00"
+                            android:textColor="#A7A7A7"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/turb_l"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="00.00"
+                            android:textColor="#A7A7A7"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="14dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/do_l"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="11.00"
+                            android:textColor="#A7A7A7"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:onClick="_btn_trig_all"
+                    android:text="START"
+                    android:textColor="#4CAF50" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:onClick="saveLog"
+                    android:text="SAVE"
+                    android:textColor="#7EB342" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#474747" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/l_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_temperature" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Temp Level"
+                                android:textColor="#fff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="00.00"
+                                android:textColor="#fff"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-thin"
+                                android:text="Celsius"
+                                android:textColor="#fff"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="155dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/_btn_temps"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:onClick="_btn_temp"
+                                android:text="START"
+                                android:textColor="#4CAF50" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:onClick="ins_temp"
+                                android:text="Log"
+                                android:textColor="#009688" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#474747" />
+                    <LinearLayout
+                        android:id="@+id/l_ph"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_ph" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-light"
+                                android:text="pH level"
+                                android:textColor="#fff"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="00.00"
+                                android:textColor="#fff"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-thin"
+                                android:text="pPt"
+                                android:textColor="#fff"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="155dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/_btn_phs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:onClick="_btn_ph"
+                                android:text="START"
+                                android:textColor="#4CAF50" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:text="Log"
+                                android:textColor="#009688" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#474747" />
+                    <LinearLayout
+                        android:id="@+id/l_sal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_salinity" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Salinity"
+                                android:textColor="#fff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="00.00"
+                                android:textColor="#fff"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-thin"
+                                android:text="TextView"
+                                android:textColor="#fff"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="155dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/_btn_sals"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:onClick="_btn_sal"
+                                android:text="START"
+                                android:textColor="#4CAF50" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:text="Log"
+                                android:textColor="#009688" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#474747" />
+                    <LinearLayout
+                        android:id="@+id/l_turb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_turb_002" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Turbidity"
+                                android:textColor="#fff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="00.00"
+                                android:textColor="#fff"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-thin"
+                                android:text="Trans"
+                                android:textColor="#fff"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="155dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/_btn_turbs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:onClick="_btn_turb"
+                                android:text="START"
+                                android:textColor="#4CAF50" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:text="Log"
+                                android:textColor="#009688" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#474747" />
+                    <LinearLayout
+                        android:id="@+id/l_do"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_do" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-light"
+                                android:text="D.Oxygen"
+                                android:textColor="#fff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="00.00"
+                                android:textColor="#fff"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-thin"
+                                android:text="pPm"
+                                android:textColor="#fff"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="155dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/_btn_dos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:onClick="_btn_do"
+                                android:text="START"
+                                android:textColor="#4CAF50" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:text="Log"
+                                android:textColor="#009688" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#474747" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

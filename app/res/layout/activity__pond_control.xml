@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="._pond_control">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/btn_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="POND CONTROL"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="119dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/xx_waterLoad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/sqaure_selection_border_no_radius"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="LOADING WATER"
+                        android:textAlignment="center"
+                        android:textColor="#DCFFFFFF"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Recent Load"
+                        android:textColor="#DCFFFFFF" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="SALT WATER :   "
+                                android:textColor="#DCFFFFFF" />
+
+                            <TextView
+                                android:id="@+id/rec_record_salt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="0000"
+                                android:textColor="#DCFFFFFF" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="  /Liter"
+                                android:textColor="#DCFFFFFF" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView56"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="FRESH WATER :   "
+                                android:textColor="#DCFFFFFF" />
+
+                            <TextView
+                                android:id="@+id/rec_record_fresh"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="0000"
+                                android:textColor="#DCFFFFFF" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="  /Liter"
+                                android:textColor="#DCFFFFFF" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <Button
+                        android:id="@+id/load_water"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="sans-serif-light"
+                        android:text="SET CONTROL"
+                        android:textColor="#4CAF50"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/xx_motor_controller"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/sqaure_selection_border_no_radius"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="MOTOR CONTROL"
+                        android:textAlignment="center"
+                        android:textColor="#DCFFFFFF"
+                        android:textSize="18sp" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="117dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="GP #  : "
+                            android:textAlignment="textEnd"
+                            android:textColor="#DCFFFFFF"
+                            android:textSize="14sp"
+                            tools:ignore="RtlCompat" />
+
+                        <Spinner
+                            android:id="@+id/sp_mtr"
+                            android:layout_width="117dp"
+                            android:layout_height="match_parent"
+                            android:background="#EBFFFFFF" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView41"
+                            android:layout_width="117dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="Motor Status : "
+                            android:textAlignment="textEnd"
+                            android:textColor="#DCFFFFFF"
+                            tools:ignore="RtlCompat" />
+
+                        <TextView
+                            android:layout_width="117dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="ON"
+                            android:textAlignment="center"
+                            android:textColor="#4CAF50" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView39"
+                            android:layout_width="117dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="CURRENT SPEED :   "
+                            android:textColor="#DCFFFFFF" />
+
+                        <TextView
+                            android:id="@+id/textView50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="0000"
+                            android:textColor="#DCFFFFFF" />
+
+                        <TextView
+                            android:id="@+id/textView49"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="  RPM"
+                            android:textColor="#DCFFFFFF"
+                            android:textStyle="italic" />
+                    </TableRow>
+
+                    <Button
+                        android:id="@+id/button16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="setControlMotor"
+                        android:text="SET CONTROL"
+                        android:textColor="#4CAF50"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/xx_drainage_controller"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/sqaure_selection_border_no_radius"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="WATER DRAINAGE CONTROL"
+                        android:textAlignment="center"
+                        android:textColor="#DCFFFFFF"
+                        android:textSize="18sp" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView48"
+                            android:layout_width="117dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="GP # :  "
+                            android:textAlignment="textEnd"
+                            android:textColor="#DCFFFFFF"
+                            android:textSize="14sp"
+                            tools:ignore="RtlCompat" />
+
+                        <Spinner
+                            android:id="@+id/sp_drng"
+                            android:layout_width="117dp"
+                            android:layout_height="match_parent"
+                            android:background="#EBFFFFFF" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="15dp">
+
+                        <TextView
+                            android:id="@+id/textView51"
+                            android:layout_width="117dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="Drainage Status :"
+                            android:textAlignment="center"
+                            android:textColor="#DCFFFFFF" />
+
+                        <TextView
+                            android:layout_width="117dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center"
+                            android:text="Flowing"
+                            android:textAlignment="center"
+                            android:textColor="#DCFFFFFF"
+                            android:textStyle="italic" />
+
+                    </TableRow>
+
+                    <Button
+                        android:id="@+id/_b_drainage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sqaure_selection_border_no_radius"
+                        android:fontFamily="sans-serif-light"
+                        android:text="DRAINAGE : OFF"
+                        android:textAlignment="center"
+                        android:textColor="#F44336"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>

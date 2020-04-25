@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_h_bg2"
+    tools:context="._dash">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/logo_sanacor" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAN ANDRESS AQUACULTURE\nCORP. I"
+                android:textColor="#FCFCFC"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="19dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_logout" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/host_port_t"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Host : Port"
+            android:textColor="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="672dp"
+                        android:orientation="vertical">
+
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/mp_BarChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="122dp"
+                            android:layout_marginBottom="10dp">
+
+                        </com.github.mikephil.charting.charts.BarChart>
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="115dp">
+
+                            <LinearLayout
+                                android:id="@+id/mlayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="140dp"
+                                android:orientation="vertical" />
+                        </HorizontalScrollView>
+
+                        <Button
+                            android:id="@+id/btn_view_log"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:text="LOG VIEW"
+                            android:textColor="#4CAF50" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:layout_marginRight="5dp"
+                            android:background="#B6B5B5" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="355dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/mlayout2"
+                                android:layout_width="match_parent"
+                                android:layout_height="292dp"
+                                android:orientation="vertical" />
+
+                            <Button
+                                android:id="@+id/button3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:text="PLANKTON IMAGES"
+                                android:textColor="#4CAF50" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_marginRight="5dp"
+                        android:background="#B6B5B5" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/main_btn_stroke_selection"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/mv_01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/dc_btn" />
+
+                            <Button
+                                android:id="@+id/btn1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:text="WATER READING"
+                                android:textColor="#4CAF50" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/main_btn_stroke_selection"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/mv_02"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/dc_btn" />
+
+                            <Button
+                                android:id="@+id/btn2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:text="PLANKTON COUNTING"
+                                android:textColor="#4CAF50"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/main_btn_stroke_selection"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/mv_03"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/dc_btn" />
+
+                            <Button
+                                android:id="@+id/btn3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:text="POND CONTROL"
+                                android:textColor="#4CAF50" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/main_btn_stroke_selection"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/mv_04"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/dc_btn" />
+
+                            <Button
+                                android:id="@+id/btn4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:text="CONFIGURATION"
+                                android:textColor="#4CAF50" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="System Developer : King Sombrio"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/v_bg"
+    tools:context="._list_of_reading">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="backDash"
+                app:srcCompat="@drawable/btn_back" />
+
+            <TextView
+                android:id="@+id/ipshared"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="WATER READING"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="33dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="clearFilter"
+                app:srcCompat="@drawable/ic_clear_filter_001" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="5px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="do_filtering"
+                app:srcCompat="@drawable/ic_menu_s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:id="@+id/header_kl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Jump to Date"
+                        android:textColor="#8D8D8D"
+                        android:textStyle="italic" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <Space
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent" />
+
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="79dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Filter Time"
+                        android:textColor="#8D8D8D"
+                        android:textStyle="italic" />
+
+                    <Space
+                        android:layout_width="17dp"
+                        android:layout_height="match_parent" />
+
+                    <Space
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/jumpdate_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="2020-12-12"
+                        android:textColor="#8D8D8D"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="12dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/jumpdate"
+                        android:layout_width="40dp"
+                        android:layout_height="45dp"
+                        app:srcCompat="@drawable/ic_calendar_001" />
+
+                    <Space
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/jumptime_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="01:01:01"
+                        android:textColor="#8D8D8D"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="40dp"
+                        android:layout_height="45dp"
+                        app:srcCompat="@drawable/ic_clock_001" />
+
+                </TableRow>
+
+
+            </TableLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/do_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-light"
+            android:onClick="make_filter"
+            android:text="Filter"
+            android:textColor="#4CAF50"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/make_filter"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="10dp"
+            android:background="#8A4B4B4B"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="GP"
+                android:textColor="#fff" />
+
+            <Spinner
+                android:id="@+id/spinnerGPlist_01"
+                style="@android:style/Widget.Spinner.DropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Pond Title"
+                android:textColor="#fff" />
+
+            <Spinner
+                android:id="@+id/spinner_title_list_01"
+                style="@android:style/Widget.Spinner.DropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="GP"
+                    android:textColor="#CDB3B1B1"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Title"
+                    android:textColor="#CDB3B1B1"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Temp"
+                    android:textAlignment="center"
+                    android:textColor="#CDB3B1B1"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="pH"
+                    android:textAlignment="center"
+                    android:textColor="#CDB3B1B1"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Sal"
+                    android:textAlignment="center"
+                    android:textColor="#CDB3B1B1"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Turb"
+                    android:textAlignment="center"
+                    android:textColor="#CDB3B1B1"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="D.O"
+                    android:textAlignment="center"
+                    android:textColor="#CDB3B1B1"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/list_sens"
+                            android:layout_width="match_parent"
+                            android:layout_height="325dp" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="69dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="10 AM"
+                        android:textColor="#4CAF50"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/button6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="4 PM"
+                        android:textColor="#4CAF50"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/button9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="4 AM"
+                        android:textColor="#4CAF50"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginBottom="5dp"
+            android:background="#fff" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Filter by Date : (*From - To)"
+            android:textColor="#8D8D8D"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="10dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_calendar_003" />
+
+                <TextView
+                    android:id="@+id/dtp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="2020-12-12"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dtp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="2020-12-12"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
